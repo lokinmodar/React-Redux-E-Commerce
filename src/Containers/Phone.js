@@ -16,13 +16,10 @@ class Phone extends React.Component{
         const columnFields = R.compose(
             R.toPairs,
             R.pick([
-                'cpu',
-                'camera',
+                'color',
+                'fabric',
                 'size',
-                'weight',
-                'display',
-                'battery',
-                'memory'
+                'type'
             ])
         )(phone);
         // console.log("columnFields ", columnFields);
