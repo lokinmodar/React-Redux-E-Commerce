@@ -21,6 +21,25 @@ a:hover {
   text-decoration: none;
 }
 
+.btn-primary.focus,
+.btn-primary:focus {
+  color: #fff;
+  border-color: #f23041;
+  background-color: #8c2639;
+}
+.btn-primary:hover {
+  color: #fff;
+  border-color: #f23041;
+  background-color: #8c2639;
+}
+.btn-primary.active,
+.btn-primary:active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  border-color: #f23041;
+  background-color: #8c2639;
+}
+
 .btn-primary.active.focus,
 .btn-primary.active:focus,
 .btn-primary.active:hover,
