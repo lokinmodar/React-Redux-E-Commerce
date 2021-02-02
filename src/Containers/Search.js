@@ -35,7 +35,7 @@ class Search extends React.Component{
         return(
             <div className="well blosd">
                 <h3 className="lead"> 
-                    Quick Shop 
+                    Koala Store
                 </h3>
                 <div className="input-group">
                     <form onSubmit={this.handleSubmit}>

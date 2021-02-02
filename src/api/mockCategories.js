@@ -1,23 +1,28 @@
 export default [
     {
       id: "1",
-      name: 'Apple'
+      name: "Men's Apparel"
     },
     {
       id: "2",
-      name: 'Samsung'
+      name: "Men's Accessories"
     },
     {
       id: "3",
-      name: 'Htc'
+      name: "Women's Apparel"
     },
     {
       id: "4",
-      name: 'Lenovo'
+      name: "Women's Accessories"
+  
     },
     {
       id: "5",
-      name: 'Microsoft'
-    }
+      name: "Kids' Apparel"
+    },
+    {
+      id: "6",
+      name: "Kids' Accessories"
+    },
   ]
   

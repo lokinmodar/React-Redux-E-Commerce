@@ -15,7 +15,7 @@ export const BasketCart = (props)=>{
                     className="btn btn-inverse btn-block btn-large"
                 >
                     <i className="fa fa-fa-shopping-cart" />
-                    <span>{totalBasketCount} item(s) -{totalPrice}</span>
+                    <span>In your cart: {totalBasketCount} item(s) - Total $: {totalPrice}</span>
                 </Link>
             </div>
         </div>
