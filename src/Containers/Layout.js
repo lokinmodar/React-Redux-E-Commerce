@@ -6,20 +6,20 @@ const Layout = ({children})=>{
     return (
         <div className="view-container">
             <div className="container">   
-            <div className="row"></div>
-                <div className="row">
-                <div className="col-md-12">
-                        Logo
+                <div className="row">                
+                    <div className="col-md-12">
+                        <img className="logo" src="/uploads/koalast.png"/>
                     </div>
+                </div>
+                <div className="row">
                     <div className="col-md-3">
-                        <SideBar/>
+                            <SideBar/>
                     </div>
                     <div className="col-md-9">
                         {children}
                     </div>
                 </div>
-            </div>
-            
+            </div>           
         </div>
     )
 };

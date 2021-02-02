@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
-import {getTotalBasketCount,getTotalBasketPrice} from '../selectors/Phones';
+import {getTotalBasketCount,getTotalBasketPrice} from '../selectors/Items';
 
 export const BasketCart = (props)=>{
     // console.log("Props passed are ", props);

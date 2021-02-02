@@ -287,7 +287,7 @@
 .fa-flag:before {
   content: "\f024";
 }
-.fa-headphones:before {
+.fa-headitems:before {
   content: "\f025";
 }
 .fa-volume-off:before {
@@ -1026,10 +1026,10 @@
 .fa-puzzle-piece:before {
   content: "\f12e";
 }
-.fa-microphone:before {
+.fa-microitem:before {
   content: "\f130";
 }
-.fa-microphone-slash:before {
+.fa-microitem-slash:before {
   content: "\f131";
 }
 .fa-shield:before {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {getCategories,getActiveCategoryId} from '../selectors/Phones';
+import {getCategories,getActiveCategoryId} from '../selectors/Items';
 import {Link,withRouter} from 'react-router';
 import {compose} from 'redux';
 import classNames from 'classnames';

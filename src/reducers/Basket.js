@@ -3,12 +3,12 @@ const initialState = [];
 
 export default (state=initialState,action)=>{
     switch(action.type){
-        case 'ADD_PHONE_TO_BASKET':
+        case 'ADD_ITEM_TO_BASKET':
         // console.log("Inside basket reducer");
             return(
                 R.append(action.payload,state)
             );
-        case 'REMOVE_PHONE_FROM_BASKET':
+        case 'REMOVE_ITEM_FROM_BASKET':
             return(
                 R.without(R.of(action.payload),state)
             );

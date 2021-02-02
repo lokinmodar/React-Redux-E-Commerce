@@ -1,8 +1,8 @@
 import {createStore, combineReducers,applyMiddleware,compose} from 'redux';
 import thunk from 'redux-thunk';
-import phoneReducer from '../reducers/phone';
-import PhonesPage from '../reducers/PhonesPage';
-import PhonePage from '../reducers/PhonePage';
+import itemReducer from '../reducers/item';
+import ItemsPage from '../reducers/ItemsPage';
+import ItemPage from '../reducers/ItemPage';
 import {routerReducer} from 'react-router-redux';
 import Basket from '../reducers/Basket';
 import Categories from '../reducers/Categories';
@@ -13,9 +13,9 @@ export default ()=>{
     const store = createStore(
         combineReducers({
             routing:routerReducer,
-            phone: phoneReducer,
-            PhonesPage: PhonesPage,
-            PhonePage: PhonePage,
+            item: itemReducer,
+            ItemsPage: ItemsPage,
+            ItemPage: ItemPage,
             Basket:Basket,
             Categories: Categories
         }),composeEnhancers(applyMiddleware(thunk))

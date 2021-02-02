@@ -6,8 +6,8 @@ import {Provider} from 'react-redux';
 import {browserHistory,Router,Route} from 'react-router';
 import {syncHistoryWithStore} from 'react-router-redux';
 import Layout from './Containers/Layout';
-import Phones from './Containers/Phones';
-import Phone from './Containers/Phone';
+import Items from './Containers/Items';
+import Item from './Containers/Item';
 import Basket from './Containers/Basket';
 
 const store = configureStore();
@@ -16,10 +16,10 @@ const jsx = (
     <Provider store={store}>
        <Router history={history}>
             <Route component={Layout}>
-                <Route path='/' component={Phones}></Route>
-                <Route path='/categories/:id' component={Phones} />
+                <Route path='/' component={Items}></Route>
+                <Route path='/categories/:id' component={Items} />
             </Route>
-            <Route path="/Phones/:id" component={Phone} />
+            <Route path="/Items/:id" component={Item} />
             <Route path="/basket" component={Basket} />
             
        </Router>

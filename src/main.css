@@ -6,6 +6,11 @@ body {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+.logo {
+  width: 50%;
+  padding: 10px;
+}
+
 a {
   color: #f23041;
   text-decoration: none;
@@ -418,6 +423,7 @@ nav.navbar-inverse .navbar-nav > li > a.Active {
   color: #fff;
   font-size: 12px;
   line-height: 18px;
+  border-radius: 4px;
 }
 .open #dLabel:hover {
   color: #444;

@@ -1,16 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { getTotalBasketPrice,getBasketPhonesWithCount } from '../selectors/Phones';
+import { getTotalBasketPrice,getBasketItemsWithCount } from '../selectors/Items';
 import R from 'ramda';
-import {removePhoneFromBasket,cleanBasket,basketCheckout} from '../actions/Phones';
+import {removeItemFromBasket,cleanBasket,basketCheckout} from '../actions/Items';
 import {Link} from 'react-router';
 
-const Basket = ({phones,totalPrice,
-                removePhoneFromBasket,cleanBasket,
+const Basket = ({items,totalPrice,
+                removeItemFromBasket,cleanBasket,
                 basketCheckout})=>{
-    // console.log(phones);
+    // console.log(items);
     // console.log(totalPrice);
-    const isBasketEmpty = R.isEmpty(phones);
+    const isBasketEmpty = R.isEmpty(items);
     const renderContent = () => {
         return (
             <div>
@@ -18,21 +18,21 @@ const Basket = ({phones,totalPrice,
                 <div className="table-responsive">
                     <table className="table-bordered table-striped table-condensed cf">
                         <tbody>
-                            {phones.map((phone,index)=>(
+                            {items.map((item,index)=>(
                                 <tr key={index}
                                     className="item-checout">
                                     <td className="first-column-checkout">
                                         <img className="img-thumbnail"
-                                            src={phone.image}
-                                            alt={phone.name}  
+                                            src={item.image}
+                                            alt={item.name}  
                                         />
                                     </td>
-                                    <td>{phone.name}</td>
-                                    <td>${phone.price}</td>
-                                    <td>{phone.count}</td>
+                                    <td>{item.name}</td>
+                                    <td>${item.price}</td>
+                                    <td>{item.count}</td>
                                     <td>
                                         <span className="delete-cart"
-                                        onClick={()=>removePhoneFromBasket(phone.id)}></span>
+                                        onClick={()=>removeItemFromBasket(item.id)}></span>
                                     </td>
                                 </tr>
                             ))}
@@ -73,7 +73,7 @@ const Basket = ({phones,totalPrice,
                             </button>
                             <button
                                 className="btn btn-success"
-                                onClick={()=>basketCheckout(phones)}
+                                onClick={()=>basketCheckout(items)}
                             >
                             <span className="glyphicon glyphicon-envelope"/>
                             Checkout
@@ -102,14 +102,14 @@ const Basket = ({phones,totalPrice,
 
 
 const mapStateToProps = (state)=>({
-    phones: getBasketPhonesWithCount(state),
+    items: getBasketItemsWithCount(state),
     totalPrice: getTotalBasketPrice(state)
 });
 
 const mapDispatchToProps = (dispatch)=>({
-    removePhoneFromBasket: (id)=>dispatch(removePhoneFromBasket(id)),
+    removeItemFromBasket: (id)=>dispatch(removeItemFromBasket(id)),
     cleanBasket: ()=>dispatch(cleanBasket()),
-    basketCheckout: (phones)=>dispatch(basketCheckout(phones))
+    basketCheckout: (items)=>dispatch(basketCheckout(items))
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(Basket);

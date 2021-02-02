@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {searchPhone} from '../actions/Phones';
+import {searchItem} from '../actions/Items';
 
 class Search extends React.Component{
 
@@ -19,12 +19,12 @@ class Search extends React.Component{
     handleSubmit = (e)=>{
         
         e.preventDefault();
-        this.props.searchPhone(this.state.searchValue);
+        this.props.searchItem(this.state.searchValue);
     };
 
     onSearchInputChange = (e)=>{
         const searchValue = e.target.value;
-        // console.log("Handling submit : ", searchValue);
+        
         this.setState({
             searchValue
         });
@@ -57,10 +57,10 @@ class Search extends React.Component{
     };
 };
 
-// export default Search;
+
 
 const mapDispatchToProps = (dispatch)=>({
-    searchPhone: (text)=>dispatch(searchPhone(text))
+    searchItem: (text)=>dispatch(searchItem(text))
 });
 
 export default connect(undefined, mapDispatchToProps)(Search);
